@@ -3,7 +3,7 @@ package br.com.danilocesarmendes;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
-import br.com.danilocesarmendes.s2it.NodeBinaryTree;
+import br.com.danilocesarmendes.s2it.BinaryTree;
 
 /**
  * 
@@ -14,7 +14,7 @@ public class BinaryTreeTest {
 	@Test
 	public void exeecicio9() {
 		// {5, 1, 2, 4, 3, 6, 9, 7, 10, 8};
-		NodeBinaryTree binaryTree = new NodeBinaryTree(5);
+		BinaryTree binaryTree = new BinaryTree(5);
 		
 		binaryTree.insert(1);
 		binaryTree.insert(2);

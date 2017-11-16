@@ -6,13 +6,13 @@ import java.util.Deque;
 /**
  * @author Danilo Mendes
  */
-public class NodeBinaryTree {
+public class BinaryTree {
 
 	private Integer value;
-	private NodeBinaryTree left;
-	private NodeBinaryTree right;
+	private BinaryTree left;
+	private BinaryTree right;
 
-	public NodeBinaryTree(int value) {
+	public BinaryTree(int value) {
 		this.value = value;
 	}
 
@@ -24,19 +24,19 @@ public class NodeBinaryTree {
 		this.value = value;
 	}
 
-	public NodeBinaryTree getLeft() {
+	public BinaryTree getLeft() {
 		return left;
 	}
 
-	void setLeft(NodeBinaryTree left) {
+	void setLeft(BinaryTree left) {
 		this.left = left;
 	}
 
-	public NodeBinaryTree getRight() {
+	public BinaryTree getRight() {
 		return right;
 	}
 
-	void setRight(NodeBinaryTree right) {
+	void setRight(BinaryTree right) {
 		this.right = right;
 	}
 
@@ -44,26 +44,26 @@ public class NodeBinaryTree {
 		int valorNoAtual = value;
 		if (item < valorNoAtual) {
 			if (left == null) {
-				left = new NodeBinaryTree(item);
+				left = new BinaryTree(item);
 			} else {
 				left.insert(item);
 			}
 		} else {
 			if (right == null) {
-				right = new NodeBinaryTree(item);
+				right = new BinaryTree(item);
 			} else {
 				right.insert(item);
 			}
 		}
 	}
 
-	public void walkLevels(NodeBinaryTree node) {
+	public void walkLevels(BinaryTree node) {
 		if (node == null)
 			throw new IllegalArgumentException("Tree node cannot be null!");
-		Deque<NodeBinaryTree> fila = new ArrayDeque<>();
+		Deque<BinaryTree> fila = new ArrayDeque<>();
 		fila.add(node);
 		while (!fila.isEmpty()) {
-			NodeBinaryTree atual = fila.removeFirst();
+			BinaryTree atual = fila.removeFirst();
 			System.out.printf("%s, ", atual.getValue());
 			if (atual.getLeft() != null)
 				fila.add(atual.getLeft());
@@ -72,14 +72,14 @@ public class NodeBinaryTree {
 		}
 	}
 
-	public Integer sumByLevels(NodeBinaryTree node) {
+	public Integer sumByLevels(BinaryTree node) {
 		Integer sum = 0;
 		if (node == null)
 			throw new IllegalArgumentException("Tree node cannot be null!");
-		Deque<NodeBinaryTree> fila = new ArrayDeque<>();
+		Deque<BinaryTree> fila = new ArrayDeque<>();
 		fila.add(node);
 		while (!fila.isEmpty()) {
-			NodeBinaryTree atual = fila.removeFirst();
+			BinaryTree atual = fila.removeFirst();
 			System.out.printf("%s, ", atual.getValue());
 			sum += atual.getValue();
 			if (atual.getLeft() != null)
@@ -109,7 +109,7 @@ public class NodeBinaryTree {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		NodeBinaryTree other = (NodeBinaryTree) obj;
+		BinaryTree other = (BinaryTree) obj;
 		if (left == null) {
 			if (other.left != null)
 				return false;
@@ -130,7 +130,7 @@ public class NodeBinaryTree {
 
 	@Override
 	public String toString() {
-		return "NodeBinaryTree [value=" + value + ", left=" + left + ", right=" + right + "]";
+		return "BinaryTree [value=" + value + ", left=" + left + ", right=" + right + "]";
 	}
 
 }
