@@ -1,18 +1,18 @@
 # Respostas S2IT
 
-**1 - E
+1 - E
 
-**2 - D
+2 - D
 
-**3 - C
+3 - C
 
-**4 - A
+4 - A
 
-**5 - A
+5 - A
 
-**6 - C
+6 - C
 
-**7 - E
+7 - E
 
 **8 - Dados dois numeros inteiros A e B, crie um terceiro inteiro C seguindo as seguintes**
 
