@@ -1,20 +1,6 @@
-# Respostas S2IT
+# Projeto de arvore binaria
 
-1 - E
-
-2 - D
-
-3 - C
-
-4 - A
-
-5 - A
-
-6 - C
-
-7 - E
-
-**8 - Dados dois numeros inteiros A e B, crie um terceiro inteiro C seguindo as seguintes**
+**1 - Dados dois numeros inteiros A e B, crie um terceiro inteiro C seguindo as seguintes**
 
 regras:
 
@@ -36,7 +22,7 @@ dos números do inteiro maior. Ex: A = 10256, B = 512, C deve ser 15012256.
 
 Desenvolva um algoritmo que atenda a todos os requisitos acima.
 
-**9 - Considerando a estrutura de uma árvore binária:**
+**2 - Considerando a estrutura de uma árvore binária:**
 
 ```
 public class BinaryTree {
